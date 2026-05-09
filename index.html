@@ -1,53 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Digital Archive | [Dad's Name]</title>
+    <title>المكتبة الرقمية | [اسم الوالد]</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>[Dad's Name]</h1>
-        <p>Author, Researcher, and Scholar</p>
-        <nav>
-            <a href="#books">Books</a>
-            <a href="#articles">Articles</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <h1>المكتبة الرقمية لـ [اسم الوالد]</h1>
+        <p>مؤلف، باحث، وأكاديمي</p>
+        <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="ابحث عن عنوان كتاب أو مقال...">
     </header>
 
-    <section id="about">
-        <h2>About the Archive</h2>
-        <p>Welcome to my personal collection of published books and research articles spanning [Number] years of work.</p>
-    </section>
-
     <main>
-        <h2 id="books">Books</h2>
-        <div class="grid">
-            <!-- Book Item -->
-            <div class="card">
-                <h3>Book Title One</h3>
-                <p>Published: 2020</p>
-                <a href="files/numerical methods.pdf" class="btn">Read Book (PDF)</a>
-            </div>
+        <div class="stats">
+            <span>📚 30+ كتب</span> | <span>📄 100+ مقالات</span>
         </div>
 
-        <h2 id="articles">Articles</h2>
-        <div class="grid">
-            <!-- Article Item -->
-            <div class="card">
-                <h3>Scientific Journal Article</h3>
-                <p>Topic: Research on [Topic]</p>
-                <a href="files/article1.pdf" class="btn">View Article</a>
+        <h2 class="section-title">الكتب والمؤلفات</h2>
+        <div class="grid" id="contentGrid">
+            
+            <!-- مثال لكتاب -->
+            <div class="card item" data-type="book">
+                <span class="badge">كتاب</span>
+                <h3>عنوان الكتاب الأول</h3>
+                <p>تاريخ النشر: 2020</p>
+                <a href="files/book1.pdf" class="btn">تحميل الكتاب (PDF)</a>
             </div>
+
+            <!-- مثال لمقال -->
+            <div class="card item" data-type="article">
+                <span class="badge badge-article">مقال</span>
+                <h3>عنوان المقال العلمي</h3>
+                <p>المجلة: اسم المجلة العلمية</p>
+                <a href="files/article1.pdf" class="btn">قراءة المقال</a>
+            </div>
+
+            <!-- كرر هذه البطاقات لكل الـ 130 عنصر -->
+
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Osama Alashqar | Built by [Your Name]</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
