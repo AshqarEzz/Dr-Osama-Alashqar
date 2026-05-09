@@ -3,46 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المكتبة الرقمية | [اسم الوالد]</title>
+    <title>المكتبة الرقمية | الصفحة الرئيسية</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <h1>المكتبة الرقمية لـ [اسم الوالد]</h1>
-        <p>مؤلف، باحث، وأكاديمي</p>
-        <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="ابحث عن عنوان كتاب أو مقال...">
     </header>
 
-    <main>
-        <div class="stats">
-            <span>📚 30+ كتب</span> | <span>📄 100+ مقالات</span>
-        </div>
+    <main class="home-container">
+        <section class="essay">
+            <h2>مقدمة</h2>
+            <p>
+                هنا يمكنك كتابة المقال التعريفي الخاص بوالدك. تحدث عن مسيرته البحثية، 
+                أهدافه من هذه المكتبة، وتاريخه في التأليف والكتابة.
+            </p>
+        </section>
 
-        <h2 class="section-title">الكتب والمؤلفات</h2>
-        <div class="grid" id="contentGrid">
-            
-            <!-- مثال لكتاب -->
-            <div class="card item" data-type="book">
-                <span class="badge">كتاب</span>
-                <h3>Numerical Methods</h3>
-                <p>تاريخ النشر: 2020</p>
-                <a href="files/book1.pdf" class="btn">تحميل الكتاب (PDF)</a>
-            </div>
-
-            <!-- مثال لمقال -->
-            <div class="card item" data-type="article">
-                <span class="badge badge-article">مقال</span>
-                <h3>عنوان المقال العلمي</h3>
-                <p>المجلة: اسم المجلة العلمية</p>
-                <a href="files/article1.pdf" class="btn">قراءة المقال</a>
-            </div>
-
-            <!-- كرر هذه البطاقات لكل الـ 130 عنصر -->
-
+        <div class="nav-buttons">
+            <a href="books.html" class="main-btn">📚 عرض الكتب</a>
+            <a href="articles.html" class="main-btn">📄 عرض المقالات</a>
         </div>
     </main>
-
-    <script src="script.js"></script>
 </body>
 </html>
