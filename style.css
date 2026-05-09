@@ -1,0 +1,52 @@
+body {
+    font-family: 'Georgia', serif; /* Classic academic feel */
+    line-height: 1.6;
+    margin: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #2c3e50; /* Deep navy blue */
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+nav a {
+    color: #bdc3c7;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#about {
+    max-width: 800px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 0 20px;
+}
