@@ -1,45 +1,98 @@
-/* Styling for the Home Page Buttons */
-.home-container {
-    max-width: 800px;
-    margin: 50px auto;
-    text-align: center;
+/* --- Global Styles for Library Pages --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.essay {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.section-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    border-bottom: 2px solid #e67e22;
+    display: inline-block;
+    padding-bottom: 10px;
 }
 
-.nav-buttons {
+/* --- The Grid System --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* --- Card Design (Books & Articles) --- */
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 5px solid #2c3e50; /* Top accent bar */
 }
 
-.main-btn {
-    flex: 1;
-    padding: 30px;
-    background: #e67e22;
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Specific styling for Books (Orange accent) */
+.book-page .card {
+    border-top-color: #e67e22;
+}
+
+/* Specific styling for Articles (Blue accent) */
+.article-page .card {
+    border-top-color: #3498db;
+}
+
+/* Text Styling inside Cards */
+.card h3 {
+    margin: 15px 0 10px 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* --- Buttons inside Cards --- */
+.btn-download {
+    background-color: #2c3e50;
     color: white;
+    text-align: center;
+    padding: 12px;
     text-decoration: none;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    transition: 0.3s;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-.main-btn:hover {
-    background: #d35400;
-    transform: scale(1.05);
+.btn-download:hover {
+    background-color: #34495e;
 }
 
-.back-link {
-    color: white;
+/* --- Back to Home Link --- */
+.back-nav {
+    padding: 20px;
+    background: #ecf0f1;
+    text-align: right; /* RTL support */
+}
+
+.back-nav a {
     text-decoration: none;
-    display: block;
-    margin-top: 10px;
-    font-size: 0.9rem;
+    color: #2c3e50;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
